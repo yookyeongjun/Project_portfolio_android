@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:elevation="1dp"
+        android:theme="@style/App.ToolbarStyle"
+        app:titleTextAppearance="@style/App.ToolbarTitleTex"
+        app:titleTextColor="@color/white">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:id="@+id/pageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="장바구니"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nanumsquareroundb"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/pic_no_result"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:src="@drawable/checkout"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:id="@+id/tv_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/pic_no_result"
+        android:layout_centerHorizontal="true"
+        android:text="장바구니가 비었습니다"
+        android:fontFamily="@font/nanumsquareroundb"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/pageName"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Cart_recyclerView"
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="주문하기"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_default"
+            android:layout_margin="5dp"
+            android:id="@+id/btnOrder"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanumsquareroundb"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/list_icon"
+        android:layout_marginLeft="-30dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="이름"
+        android:textAlignment="textStart"
+        android:textSize="18dp"
+        android:fontFamily="@font/nanumsquareroundr"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="수량"
+        android:textAlignment="textStart"
+        android:textSize="18dp"
+        android:fontFamily="@font/nanumsquareroundr"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:id="@+id/tv_dday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="유통기한"
+        android:textAlignment="textStart"
+        android:textSize="18dp"
+        android:fontFamily="@font/nanumsquareroundr"
+        android:textColor="@color/black"/>
+
+
+    <CheckBox
+        android:id="@+id/list_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:elevation="1dp"
+        android:theme="@style/App.ToolbarStyle"
+        app:titleTextAppearance="@style/App.ToolbarTitleTex"
+        app:titleTextColor="@color/white">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+    <TextView
+        android:id="@+id/pageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="품목소비"
+        android:textSize="30dp"
+        android:fontFamily="@font/nanumsquareroundb"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+    <ImageView
+        android:id="@+id/pic_no_result"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/pic_no_result" />
+
+    <TextView
+        android:id="@+id/tv_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/pic_no_result"
+        android:layout_centerHorizontal="true"
+        android:text="추가된 품목이 없습니다"
+        android:fontFamily="@font/nanumsquareroundb"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/pageName"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Content_recyclerView"
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints"/>
+
+
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="소비하기"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:id="@+id/btnUse"
+            android:fontFamily="@font/nanumsquareroundb"
+            android:textSize="20dp"
+            android:background="@drawable/btn_default"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
